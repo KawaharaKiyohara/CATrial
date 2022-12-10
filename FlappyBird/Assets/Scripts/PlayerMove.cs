@@ -38,7 +38,11 @@ public class PlayerMove : MonoBehaviour
     {
         flickValue_y = endTouchPos.y - startTouchPos.y;
         jumpPower = flickValue_y * 0.03f;
-        if (jumpPower >= 10.0f)
+        if (jumpPower <= 0.0f)
+        {
+            jumpPower = 0.0f;
+        }
+            if (jumpPower >= 10.0f)
         {
             jumpPower = 10.0f;
         }
