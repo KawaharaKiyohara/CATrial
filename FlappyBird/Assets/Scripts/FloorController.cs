@@ -8,9 +8,9 @@ public class FloorController : MonoBehaviour
     void Update()
     {
         transform.Translate(-0.01f, 0, 0);
-        if (transform.position.x <= -18.944f)
+        if (transform.position.x <= -20.72f)
         {
-            transform.position = new Vector3(18.944f, -4.7f, -1.0f);
+            transform.position = new Vector3(20.72f, -4.7f, -2.0f);
         }
     }
 }
