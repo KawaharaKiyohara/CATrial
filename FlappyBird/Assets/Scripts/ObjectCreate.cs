@@ -11,13 +11,21 @@ public class ObjectCreate : MonoBehaviour
     private float vecX;
     private float vecY;
 
+    private PlayerMove Player;
+
     void Start()
     {
         time = Random.Range(1.0f, 3.0f);
+        Player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerMove>();
     }
 
     void Update()
     {
+        if (Player.gamestart == false)
+        {
+            return;
+        }
+
         //ƒ‰ƒ“ƒ_ƒ€‚Å“yŠÇ‚ğ¶¬
         time -= Time.deltaTime;
         if (time <= 0.0f)
