@@ -10,6 +10,8 @@ public class PlayerMove : MonoBehaviour
     float flickValue_x;
     float flickValue_y;
 
+    public bool gamestart = false;   // 現在の体力
+
     public int HP = 1;   // 現在の体力
     public int NowScore = 0;   // 現在のスコア
 
@@ -25,6 +27,16 @@ public class PlayerMove : MonoBehaviour
 
     void Update()
     {
+        if(gamestart==false)
+        {
+            player_rb.velocity = new Vector2(0, 0);
+            transform.position = new Vector3(0, 0, -1);
+            if (Input.GetMouseButtonDown(0) == true)
+            {
+                gamestart = true;
+            }
+        }
+
         Debug.Log(NowScore); // ログを表示する
         Debug.Log(HP); // ログを表示する
         if (HP <= 0)
