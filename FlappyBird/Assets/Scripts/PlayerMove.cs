@@ -26,6 +26,7 @@ public class PlayerMove : MonoBehaviour
     void Update()
     {
         Debug.Log(NowScore); // ログを表示する
+        Debug.Log(HP); // ログを表示する
         if (HP <= 0)
         {
             return;

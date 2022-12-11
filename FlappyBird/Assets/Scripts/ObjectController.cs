@@ -8,7 +8,7 @@ public class ObjectController : MonoBehaviour
     void Update()
     {
         transform.Translate(-0.01f, 0, 0);
-        if (transform.position.x <= -10.0f)
+        if (transform.position.x <= -15.0f)
         {
             Destroy(gameObject);
         }
