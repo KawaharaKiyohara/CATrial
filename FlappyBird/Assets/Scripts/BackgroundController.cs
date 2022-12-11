@@ -8,9 +8,9 @@ public class BackgroundController : MonoBehaviour
     void Update()
     {
         transform.Translate(-0.001f, 0, 0);
-        if (transform.position.x <= -18.259f)
+        if (transform.position.x <= -20.615f)
         {
-            transform.position = new Vector3(18.259f, -0.5f, 0.0f);
+            transform.position = new Vector3(20.615f, -0.5f, 0.0f);
         }
     }
 }

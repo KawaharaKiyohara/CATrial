@@ -21,7 +21,7 @@ public class ObjectCreate : MonoBehaviour
         {
             vecX = Random.Range(2.0f, 4.0f);
             time = vecX;
-            Instantiate(ball, new Vector3(15, -2, 0), Quaternion.identity);
+            Instantiate(ball, new Vector3(15, -2, -1), Quaternion.identity);
         }
     }
 }

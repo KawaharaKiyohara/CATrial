@@ -10,6 +10,9 @@ public class PlayerMove : MonoBehaviour
     float flickValue_x;
     float flickValue_y;
 
+    public int HP = 1;   // 現在の体力
+    public int NowScore = 0;   // 現在のスコア
+
     Rigidbody2D player_rb;
 
     [SerializeField] float jumpPower = 1.0f;
@@ -17,10 +20,16 @@ public class PlayerMove : MonoBehaviour
     void Start()
     {
         player_rb = GetComponent<Rigidbody2D>();
+        NowScore = 0;
     }
 
     void Update()
     {
+        Debug.Log(NowScore); // ログを表示する
+        if (HP <= 0)
+        {
+            return;
+        }
         if(Input.GetMouseButtonDown(0)==true)
         {
             startTouchPos = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
