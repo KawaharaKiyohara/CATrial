@@ -557,6 +557,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ball: {fileID: 6447571529467661257, guid: 35f5eae25f9feb04da491b3e00e8ed08, type: 3}
+  ballup: {fileID: 6447571529467661257, guid: 9cb6183f81aeb9a4191d2dbceade19ad, type: 3}
   collision: {fileID: 6447571529467661257, guid: 039455d7a59135f408429c388356d711, type: 3}
 --- !u!4 &1053096753
 Transform:
