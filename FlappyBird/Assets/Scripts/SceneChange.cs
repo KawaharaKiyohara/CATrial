@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;  // シーンを扱う場合これを追加しないとダメ
 
 public class SceneChange : MonoBehaviour
 {
-    public string ResultScene;    // 遷移先のシーン名
     private PlayerMove Player;
+    private int change = 0;
 
     void Start()
     {
@@ -16,9 +16,11 @@ public class SceneChange : MonoBehaviour
     void Update()
     {
         // スペースキーが押されたらシーンを切り替える
-        if (Player.HP <= 0)
+        if (Player.HP <= 0 && change ==0)
         {
-            SceneManager.LoadScene(ResultScene);
+            change = 1;
+            SceneManager.LoadScene("ResultScene", LoadSceneMode.Additive);
+
         }
     }
 }
